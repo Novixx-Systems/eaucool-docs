@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eaucool Keyword Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        h2 {
+            color: #008080;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            color: #006400;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eaucool Keyword Documentation</h1>
+    <p>
+        This documentation provides information about the keywords used in the Eaucool programming language.
+    </p>
+
+    <i>Note: Arguments that have spaces in them must be enclosed in double quotes.</i>
+
+    <h2>Operators</h2>
+
+    <h3>$=</h3>
+    <p>
+        <h4 style="color: red">This operator has been deprecated since v1.0. Use the 'echo' keyword instead.</h3>
+        Description: Outputs formatted text to the console.
+    </p>
+    <pre>
+        $= text
+    </pre>
+
+    <h3>$</h3>
+    <p>
+        Description: Creates or updates a variable.
+    </p>
+    <pre>
+        $ variable_name = value
+    </pre>
+
+    <h2>Utility Keywords</h2>
+
+    <h3>echo</h3>
+    <p>
+        Description: Prints a message to the console.
+    </p>
+    <pre>
+        echo message
+    </pre>
+
+    <h3>rndmax</h3>
+    <p>
+        Description: Sets the maximum value for the random number generator.
+    </p>
+    <pre>
+        rndmax max_value
+    </pre>
+
+    <h3>random</h3>
+    <p>
+        Description: Generates a random number between 0 and the specified maximum value.
+    </p>
+    <pre>
+        random
+    </pre>
+
+    <h3>existing</h3>
+    <p>
+        Description: Checks if a variable exists.
+    </p>
+    <pre>
+        existing $variable_name
+    </pre>
+
+    <h3>escape</h3>
+    <p>
+        Description: Escapes special characters in a variable.
+    </p>
+    <pre>
+        escape $variable_name
+    </pre>
+
+    <h3>replace</h3>
+    <p>
+        Description: Replaces occurrences of a substring in a variable with another value.
+    </p>
+    <pre>
+        replace $variable_name substring_to_replace new_value
+    </pre>
+
+    <h2>Control Flow Keywords</h2>
+
+    <h3>if</h3>
+    <p>
+        Description: Conditionally executes code based on a condition.
+    </p>
+    <pre>
+        if $variable_name = value
+    </pre>
+
+    <h2>Date/Time Keywords</h2>
+
+    <h3>getdate</h3>
+    <p>
+        Description: Gets the current date in the format "yyyy-MM-dd" and stores it in a variable.
+    </p>
+    <pre>
+        getdate $variable_name
+    </pre>
+
+    <h2>Mail Keywords</h2>
+
+    <h3>mail</h3>
+    <p>
+        Description: Sends an email using the specified SMTP server.
+    </p>
+    <pre>
+        mail to_address subject body from_address password smtp_server
+    </pre>
+
+    <h2>File System Keywords</h2>
+
+    <h3>writefile</h3>
+    <p>
+        Description: Writes content to a file.
+    </p>
+    <pre>
+        writefile filename content
+    </pre>
+
+    <h3>readfile</h3>
+    <p>
+        Description: Reads the content of a file and stores it in a variable.
+    </p>
+    <pre>
+        readfile filename
+    </pre>
+
+    <h3>rmfile</h3>
+    <p>
+        Description: Deletes a file from the file system.
+    </p>
+    <pre>
+        rmfile filename
+    </pre>
+
+    <h3>appendfile</h3>
+    <p>
+        Description: Appends content to a file.
+    </p>
+    <pre>
+        appendfile filename content
+    </pre>
+
+    <h3>execute</h3>
+    <p>
+        Description: Executes a command with optional arguments.
+    </p>
+    <pre>
+        execute command arguments
+    </pre>
+
+    <h2>Web Keywords</h2>
+
+    <h3>urldecode</h3>
+    <p>
+        Description: URL decodes a value and stores it in a variable.
+    </p>
+    <pre>
+        urldecode $variable_name value_to_decode
+    </pre>
+
+    <h3>urlencode</h3>
+    <p>
+        Description: URL encodes a value and stores it in a variable.
+    </p>
+    <pre>
+        urlencode $variable_name value_to_encode
+    </pre>
+
+    <h3>urlget</h3>
+    <p>
+        Description: Performs an HTTP GET request and stores the response in a variable.
+    </p>
+    <pre>
+        urlget $variable_name url
+    </pre>
+
+    <h3>urlpost</h3>
+    <p>
+        Description: Performs an HTTP POST request and stores the response in a variable.
+    </p>
+    <pre>
+        urlpost $variable_name url data
+    </pre>
+
+    <h2>Method Keywords</h2>
+
+    <h3>method</h3>
+    <p>
+        Description: Defines a method with the specified name and associated code.
+    </p>
+    <pre>
+        method method_name
+        ...
+        stopmethod
+    </pre>
+
+    <h3>stopmethod</h3>
+    <p>
+        Description: Stops the execution of a method.
+    </p>
+    <pre>
+        stopmethod
+    </pre>
+
+    <h3>callmethod</h3>
+    <p>
+        Description: Calls a previously defined method with the specified name.
+    </p>
+    <pre>
+        callmethod method_name
+    </pre>
+
+    <h2>Other Keywords</h2>
+    <h3>include</h3>
+    <p>
+        Description: Includes the contents of a file in the current script.
+    </p>
+    <pre>
+        // Note that 'include' does not require double quotes around the filename
+        include filename
+    </pre>
+</body>
+</html>
